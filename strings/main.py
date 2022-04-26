@@ -15,14 +15,13 @@ report=f'{scorer0_name} scored in the {goal_0}nd minute\n{scorer1_name} scored i
 print(report)
 
 player= "Marco van Basten"
-first_name= player[:5]
-last_name_find= player[6:]
-last_name_len= len(last_name_find)
-print(last_name_len)
+first_name= player[player.find('Marco'):5]
+last_name_find= player[player.find('van Basten'):]
+last_name_len= len([last_name_find] [-1])
 name_short= f'{first_name[0]}. {last_name_find}'
 print(name_short)
 chant= f'{first_name}! '* len(first_name[1:]) + f'{first_name}'+'!' 
 print(chant)
-good_chant = (' ' != chant.rstrip()[-1])
+good_chant = (' ' != chant)
 print(good_chant)
 
